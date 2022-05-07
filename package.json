@@ -1,0 +1,64 @@
+{
+  "name": "tsapi",
+  "version": "1.0.0",
+  "description": "swagger json",
+  "main": "main.js",
+  "types": "main.d.ts",
+  "scripts": {
+    "dev": "cd example && ts-node test",
+    "build": "npm run clean && tsc",
+    "postpack": "npm run clean",
+    "prepack": "npm run build",
+    "clean": "ts-emit-clean",
+    "tsapi": "cd example && cd services && ts-node test"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [
+    "ast",
+    "recast",
+    "swagger"
+  ],
+  "lint-staged": {
+    "*.ts": [
+      "eslint",
+      "prettier -c"
+    ]
+  },
+  "author": "Bin",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/generator": "^7.11.4",
+    "@babel/parser": "^7.11.4",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/template": "^7.10.4",
+    "@babel/types": "^7.10.2",
+    "babylon": "^6.18.0"
+  },
+  "dependencies": {
+    "@types/node": "^14.14.6",
+    "ajv": "^8.11.0",
+    "assert": "^2.0.0",
+    "ast-types": "^0.14.2",
+    "aws4": "^1.11.0",
+    "babel-preset-es2015": "^6.24.1",
+    "eslint": "^7.12.1",
+    "flow-parser": "^0.137.0",
+    "lint-staged": "^10.5.1",
+    "mime-types": "^2.1.35",
+    "prettier": "^2.1.2",
+    "qoa": "^0.2.0",
+    "recast": "^0.20.4",
+    "reify": "^0.20.12",
+    "request": "^2.88.2",
+    "swagger-parser": "^10.0.3",
+    "swagger-typescript-api": "^9.3.1",
+    "ts-emit-clean": "^1.0.0",
+    "ts-node": "^9.1.1",
+    "tsc": "^1.20150623.0",
+    "tslib": "^2.0.3",
+    "typescript": "^4.0.5"
+  }
+}
